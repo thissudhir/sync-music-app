@@ -10,7 +10,10 @@
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.thissudhir.syncmusic"
+      "bundleIdentifier": "com.thissudhir.syncmusic",
+      "infoPlist": {
+        "UIbackgroundModes": ["audio"]
+      }
     },
     "android": {
       "adaptiveIcon": {

@@ -58,17 +58,20 @@ Sync Music is a feature-rich music streaming application designed to give you co
 ### Installation
 
 1. Clone the repository
+
    ```bash
    git clone https://github.com/yourusername/sync-music.git
    cd sync-music
    ```
 
 2. Install dependencies
+
    ```bash
    npm install
    ```
 
 3. Start the development server
+
    ```bash
    npx expo start
    ```
@@ -158,6 +161,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Acknowledgments
 
 Built with:
+
 - [Expo](https://expo.dev) - Universal React applications
 - [React Native](https://reactnative.dev) - Cross-platform mobile framework
 - [TypeScript](https://www.typescriptlang.org) - Type-safe development
