@@ -14,6 +14,10 @@ const ItemDivider = () => (
 )
 
 const TrackList = ({ track, ...flatlistProps }: TrackListProps) => {
+
+    const handleTrackSelect = (track: Track) => {
+        console.log("[TRACK]: currently playing:", track)
+    }
     return (
         <FlatList
             data={track}
@@ -23,6 +27,7 @@ const TrackList = ({ track, ...flatlistProps }: TrackListProps) => {
             renderItem={({ item: track }) => (
                 <TrackListItems
                     track={track}
+                    onTrackSelect={handleTrackSelect}
                 />
             )}
             {...flatlistProps}
