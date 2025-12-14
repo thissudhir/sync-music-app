@@ -1,7 +1,20 @@
-import { Stack } from 'expo-router'
+import { useSetupTrackPlayer } from '@/hooks/useSetupTrackPlayer'
+import { SplashScreen, Stack } from 'expo-router'
+import { useCallback } from 'react'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 
+SplashScreen.preventAutoHideAsync()
+
 const App = () => {
+
+    // hide the splash screen
+    const handleTrackPlayerLoaded = useCallback(() => {
+        SplashScreen.hideAsync()
+    }, [])
+
+    useSetupTrackPlayer({
+        onLoad: handleTrackPlayerLoaded
+    })
     return (
         <SafeAreaProvider>
             {/* <GestureHandlerRootView style={{ flex: 1 }}> */}
