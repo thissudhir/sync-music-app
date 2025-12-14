@@ -17,6 +17,7 @@ const TrackList = ({ track, ...flatlistProps }: TrackListProps) => {
 
     const handleTrackSelect = async (track: Track) => {
         await TrackPlayer.load(track)
+        await TrackPlayer.play()
     }
     return (
         <FlatList
