@@ -77,11 +77,10 @@ const TabNavigation = () => {
                     position: 'absolute',
                     right: 8,
                     left: 8,
-                    bottom: 78
+                    bottom: 83.5
                 }}
             />
         </>
-
     )
 }
 

@@ -4,16 +4,16 @@ import { Track, useActiveTrack } from 'react-native-track-player'
 
 import { PlayPauseButton, SkipToNextButton } from '@/components/PlayerControls'
 import { colors } from '@/constants/tokens'
+import { useLastActiveTrack } from '@/hooks/useLastActiveTrack'
 import { defaultStyles } from '@/styles'
 
 const FloatingPlayer = ({ style }: ViewProps) => {
-    const isActiveTrack = useActiveTrack()
+    const activeTrack = useActiveTrack()
+    const lastActiveTrack = useLastActiveTrack()
 
-    if (!isActiveTrack) return null
+    if (!activeTrack) return null
 
-    const displayTrack: Track = isActiveTrack ?? {
-        title: "This is the dummy song player"
-    }
+    const displayTrack = activeTrack ?? lastActiveTrack
 
     return (
         <TouchableOpacity activeOpacity={0.9} style={[
