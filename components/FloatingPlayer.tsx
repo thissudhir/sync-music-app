@@ -6,6 +6,7 @@ import { PlayPauseButton, SkipToNextButton } from '@/components/PlayerControls'
 import { colors } from '@/constants/tokens'
 import { useLastActiveTrack } from '@/hooks/useLastActiveTrack'
 import { defaultStyles } from '@/styles'
+import MovingTitle from './MovingTitle'
 
 const FloatingPlayer = ({ style }: ViewProps) => {
     const activeTrack = useActiveTrack()
@@ -27,7 +28,7 @@ const FloatingPlayer = ({ style }: ViewProps) => {
                     style={styles.trackArtWorkImage}
                 />
                 <View style={styles.trackTitleContainer}>
-                    <Text style={styles.trackTitleText}>{displayTrack.title}</Text>
+                    <MovingTitle title={displayTrack.title} style={styles.trackTitleText}/>
                 </View>
                 <View style={styles.trackControlContainer}>
                     <PlayPauseButton iconSize={24} />
