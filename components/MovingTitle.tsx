@@ -1,11 +1,12 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React, { useEffect } from 'react'
 import Animated, { Easing, StyleProps, useAnimatedStyle, useSharedValue, withDelay, withRepeat, withTiming } from 'react-native-reanimated'
+import { StyleProp, TextStyle } from 'react-native'
 
 export type MovingTitleProps = {
     title: string,
     animatedThreshold: number,
-    style?: StyleProps,
+    style?: StyleProp<TextStyle>,
 }
 
 const MovingTitle = ({ title, animatedThreshold, style }: MovingTitleProps) => {
@@ -20,14 +21,14 @@ const MovingTitle = ({ title, animatedThreshold, style }: MovingTitleProps) => {
                 withTiming(
                     -textWidth,
                     {
-                        duration: 500,
+                        duration: 1000,
                         easing: Easing.linear
                     }),
                 -1,
                 true
             ),
         )
-    }, [])
+    }, [translateX, title, animatedThreshold, shouldAnimate, textWidth])
     const animatedStyle = useAnimatedStyle(() => {
         return {
             transform: [{ translateX: translateX.value }]
@@ -48,5 +49,3 @@ const MovingTitle = ({ title, animatedThreshold, style }: MovingTitleProps) => {
 }
 
 export default MovingTitle
-
-const styles = StyleSheet.create({})

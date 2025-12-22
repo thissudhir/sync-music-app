@@ -28,7 +28,11 @@ const FloatingPlayer = ({ style }: ViewProps) => {
                     style={styles.trackArtWorkImage}
                 />
                 <View style={styles.trackTitleContainer}>
-                    <MovingTitle title={displayTrack.title} style={styles.trackTitleText}/>
+                    <MovingTitle
+                        title={displayTrack.title ?? ""}
+                        animatedThreshold={25}
+                        style={styles.trackTitleText}
+                    />
                 </View>
                 <View style={styles.trackControlContainer}>
                     <PlayPauseButton iconSize={24} />

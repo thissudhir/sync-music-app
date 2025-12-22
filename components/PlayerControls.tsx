@@ -21,7 +21,7 @@ export const PlayPauseButton = ({ styles, iconSize }: PlayerButtonsProps) => {
         activeOpacity={0.85}
         onPress={playing ? TrackPlayer.pause : TrackPlayer.play}
       >
-        <FontAwesome
+        <FontAwesome6
           name={`${playing ? "pause" : "play"}`}
           size={iconSize}
           color={colors.text} />
