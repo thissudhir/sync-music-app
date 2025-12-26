@@ -7,17 +7,22 @@ import { colors } from '@/constants/tokens'
 import { useLastActiveTrack } from '@/hooks/useLastActiveTrack'
 import { defaultStyles } from '@/styles'
 import MovingTitle from './MovingTitle'
+import { useRouter } from 'expo-router'
 
 const FloatingPlayer = ({ style }: ViewProps) => {
+    const router = useRouter()
     const activeTrack = useActiveTrack()
     const lastActiveTrack = useLastActiveTrack()
 
+    const handlePress = () => {
+        router.navigate('/player')
+    }
     if (!activeTrack) return null
 
     const displayTrack = activeTrack ?? lastActiveTrack
 
     return (
-        <TouchableOpacity activeOpacity={0.9} style={[
+        <TouchableOpacity onPress={handlePress} activeOpacity={0.9} style={[
             styles.container, style
         ]}>
             <>

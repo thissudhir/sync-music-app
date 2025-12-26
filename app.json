@@ -13,8 +13,10 @@
       "bundleIdentifier": "com.thissudhir.syncmusic",
       "infoPlist": {
         "UIbackgroundModes": [
+          "audio",
           "audio"
-        ]
+        ],
+        "ITSAppUsesNonExemptEncryption": false
       }
     },
     "android": {
@@ -50,6 +52,12 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "5264136a-633d-4688-adde-d5586111a5e7"
+      }
     }
   }
 }
