@@ -1,8 +1,10 @@
 import { useLogTrackPlayerState } from '@/hooks/useLogTrackPlayerState'
 import { useSetupTrackPlayer } from '@/hooks/useSetupTrackPlayer'
+
 import { SplashScreen, Stack } from 'expo-router'
 import { useCallback } from 'react'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
+import { GestureHandlerRootView } from 'react-native-gesture-handler'
 
 // show the splash screen while loading the track player
 SplashScreen.preventAutoHideAsync()
@@ -19,10 +21,10 @@ const App = () => {
     useLogTrackPlayerState()
     return (
         <SafeAreaProvider>
-            {/* <GestureHandlerRootView style={{ flex: 1 }}> */}
-            <RootNavigation />
-            {/* <StatusBar style="auto" /> */}
-            {/* </GestureHandlerRootView> */}
+            <GestureHandlerRootView style={{ flex: 1 }}>
+                <RootNavigation />
+                {/* <StatusBar style="auto" /> */}
+            </GestureHandlerRootView>
         </SafeAreaProvider>
     )
 }

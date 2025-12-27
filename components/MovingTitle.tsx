@@ -21,7 +21,7 @@ const MovingTitle = ({ title, animatedThreshold, style }: MovingTitleProps) => {
                 withTiming(
                     -textWidth,
                     {
-                        duration: 1000,
+                        duration: 5000,
                         easing: Easing.linear
                     }),
                 -1,
