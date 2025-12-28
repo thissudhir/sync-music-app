@@ -30,13 +30,13 @@ const PlayerProgressBar = ({ style }: ViewProps) => {
                 progress={position}
                 minimumValue={min}
                 maximumValue={max}
-                theme={{
-                    minimumTrackTintColor: colors.minimumTrackTintColor,
-                    maximumTrackTintColor: colors.maximumTrackTintColor
-                }}
                 containerStyle={utilsStyles.slider}
                 thumbWidth={0}
                 renderBubble={() => null}
+                theme={{
+                    minimumTrackTintColor: colors.minimumTrackTintColor,
+                    maximumTrackTintColor: colors.maximumTrackTintColor,
+                }}
                 onSlidingStart={() => (isSliding.value = true)}
                 onValueChange={async (value) => {
                     await TrackPlayer.seekTo(value * duration)
