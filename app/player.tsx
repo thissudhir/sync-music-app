@@ -86,7 +86,7 @@ const PlayerScreen = () => {
                         <PlayerControls style={{ marginTop: 40 }} />
 
                     </View>
-                    <PlayerVolumeBar style={{ marginTop: 'auto', marginBottom: 30 }} />
+                    <PlayerVolumeBar style={{ marginTop: 40, marginBottom: 30 }} />
                     <View style={utilsStyles.centeredRow}>
                         <PlayerToggleRepeat size={30} style={{ marginTop: 6 }} />
                     </View>
