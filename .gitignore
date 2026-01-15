@@ -11,7 +11,8 @@ node_modules/
 dist/
 web-build/
 expo-env.d.ts
-
+_.js
+.excalidraw
 # Native
 .kotlin/
 *.orig.*
