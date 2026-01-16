@@ -11,7 +11,7 @@ const FavoritesScreenLayout = () => {
                 <Stack.Screen
                     name='index'
                     options={{
-                         ...StackScreenWithSearchBar,
+                        ...StackScreenWithSearchBar,
                         headerTitle: "Favorites"
                     }} />
             </Stack>
