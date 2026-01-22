@@ -7,13 +7,15 @@ import { screenPadding } from '@/constants/tokens'
 import useNavigationSearch from '@/hooks/useNavigationSearch'
 import { useFavorite } from '@/store/library'
 import { trackTitleFilter } from '@/helpers/filter'
+
 const FavoritesScreen = () => {
     const search = useNavigationSearch({
         searchBarOptions: {
             placeholder: "Find in favorite"
         }
     })
-    const favoriteTracks = useFavorite().favroite
+    const favoriteTracks = useFavorite().favorite
+
     const filteredFavoriteTracks = useMemo(() => {
         if (!search) return favoriteTracks
         return favoriteTracks.filter(trackTitleFilter(search))
