@@ -10,7 +10,7 @@ import { trackTitleFilter } from '@/helpers/filter'
 
 const FavoritesScreen = () => {
     const search = useNavigationSearch({
-        searchBarOptions: {
+        searchBarOptions: { 
             placeholder: "Find in favorite"
         }
     })
