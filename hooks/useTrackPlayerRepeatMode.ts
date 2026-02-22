@@ -13,5 +13,5 @@ export const useTrackPlayerRepeatMode = () => {
         TrackPlayer.getRepeatMode().then(setRepeatmode)
     }, [])
 
-    return { changeRepeatMode, repeatMode  }
+    return { changeRepeatMode, repeatMode   }
 }

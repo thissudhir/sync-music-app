@@ -18,7 +18,7 @@ const repeatOrder = [
 const PlayerToggleRepeat = ({ ...iconProps }: IconProps) => {
     const { repeatMode, changeRepeatMode } = useTrackPlayerRepeatMode()
 
-    const toggleRepeatMode = () => {
+    const toggleRepeatMode = () => { 
         if (repeatMode == null) return
 
         const currentIndex = repeatOrder.indexOf(repeatMode)
